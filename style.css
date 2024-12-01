@@ -1,0 +1,501 @@
+/****** SLIDER CSS SETTINGS FROM CHATGPT ******/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tinos, serif;
+  font-size: 24px;
+  width: 100%;
+  /* max-width: 1920px; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/****** END OF SLIDER CSS SETTINGS FROM CHATGPT ******/
+
+.navbar {
+  /* border: 5px solid green; */
+  box-sizing: border-box;
+  margin: 1rem 2rem 1rem 2rem;
+  border-bottom: 5px solid grey;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 6px 1px 3px rgba(0, 0, 0, 0.8);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+#navbar-logo {
+  border-radius: 5px;
+}
+.navbar-header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-menu {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin-left: -200px;
+}
+
+.header-menu {
+  margin: auto;
+}
+.top-menu .header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+  /* margin-left:0px; */
+  text-align: center;
+}
+
+.top-menu .header-menu li a {
+  text-decoration: none;
+  list-style-type: none;
+  font-weight: 600;
+  color: black;
+}
+
+.top-menu .header-menu li {
+  list-style-type: none;
+}
+
+.top-menu .header-menu a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #009246 33.33%,
+    #ffffff 33.33%,
+    #ffffff 66.66%,
+    #ce2b37 66.66%
+  );
+  transform: translateX(-101%);
+  transition: transform 0.7s ease-in-out;
+  z-index: -1;
+}
+
+.top-menu .header-menu a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+#address-link:hover {
+  color: black;
+}
+
+.top-menu .header-menu a:hover::before {
+  transform: translate(0);
+}
+
+/* #menu-link, #address-link, #gallery-link {
+  justify-content: center;
+} */
+
+.call-us {
+  width: 100px;
+  height: 100px;
+  padding: 2rem;
+  font-size: 1rem;
+  background: linear-gradient(45deg, #bf3741, #bf3741);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.call-us:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+  transform: translateY(-2px);
+}
+
+.inside-icon {
+  position: relative;
+}
+.inside-icon #call-us-button {
+  background: none;
+  border: none;
+  object-fit: contain;
+  overflow: hidden;
+  z-index: 1;
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+
+#call-image {
+  box-sizing: border-box;
+  position: absolute;
+  /* top: 0; */
+  left: -3px;
+  width: 2.5rem;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* background: linear-gradient(45deg, #e50909, #c44c15); */
+  overflow: hidden;
+}
+
+.main-section {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.green {
+  border: 2px #008c48 solid;
+  width: 100px;
+}
+
+.white {
+  border: 1px #fff solid;
+  width: 50px;
+}
+
+.red {
+  border: 2px #bf3741 solid;
+  width: 100px;
+}
+
+/* THE GRID CONTAINER */
+
+.menu-items {
+  border: 5px solid #f5f3f1;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin: 0 25px 50px 25px;
+  padding: 25px 0;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  justify-items: center;
+  align-items: center;
+  list-style: none;
+}
+
+span {
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-weight: 600;
+  color: rgb(121, 117, 117);
+}
+
+.photo-item:hover {
+  transform: translateY(-20px);
+}
+
+.photo-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.google-maps {
+  margin-bottom: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 6px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* FOOTER */
+
+.footer-container {
+  border-top: 5px solid grey;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 6px 1px 3px rgba(0, 0, 0, 0.8);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+#footer-logo {
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#facebook-click:hover {
+  transform: translateY(-10px);
+}
+
+#call-click:hover {
+  transform: translateY(-10px);
+}
+
+#facebook-click {
+  transition: all 0.3s ease;
+}
+
+#call-click {
+  transition: all 0.3s ease;
+}
+
+#fb-call {
+  margin-left: 35px;
+}
+
+.facebook.call {
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+.middle-container .middle-list {
+  display: flex;
+  flex-direction: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin: auto;
+  margin-top: 30px;
+
+  /* transform: translateX(-350px); */
+}
+
+/* #links {
+  transform: translateY(-42px);
+} */
+/* .right-container {
+  transform: translateX(-700px);
+} */
+
+footer span {
+  font-weight: bold;
+  color: black;
+  text-align: left;
+  margin-left: -20px;
+  margin-bottom: 10px;
+}
+
+.middle-list li a {
+  /* line-height: 1.5; */
+  color: black;
+  text-decoration: none;
+}
+
+.middle-list {
+  list-style-type: "👉 ";
+}
+
+.middle-list a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.trademark::after {
+  content: "© 2024 La Trattoria Marcello & Giulia. All rights reserved.";
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 1500px) {
+  .middle-container .middle-list {
+    font-size: large;
+  }
+}
+
+@media (max-width: 1380px) {
+  #footer-logo {
+    height: 80px;
+  }
+  .middle-container .middle-list {
+    font-size: medium;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 0;
+  }
+  #facebook-click {
+    height: 60px;
+    width: 60px;
+  }
+  #call-click {
+    height: 60px;
+    width: 60px;
+  }
+  .middle-list {
+    list-style-type: none;
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1250px) {
+  #navbar-logo {
+    height: 100px;
+  }
+
+  .top-menu {
+    margin-right: -150px;
+  }
+
+  .trademark {
+    font-size: large;
+  }
+}
+
+@media (max-width: 1060px) {
+  #navbar-logo {
+    height: 80px;
+  }
+
+  .navbar {
+    font-size: large;
+  }
+
+  .call-us {
+    width: 80px;
+    height: 80px;
+  }
+
+  #call-image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -15%);
+  }
+
+  .menu-items {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+    margin: 0 25px 50px 25px;
+    padding: 25px 0;
+  }
+
+  #footer-logo {
+    height: 70px;
+  }
+  .middle-container .middle-list {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 895px) {
+  .slider {
+    max-width: 600px;
+  }
+  #footer-logo {
+    height: 70px;
+  }
+  .middle-container .middle-list {
+    font-size: 14px;
+    margin-left: 30px;
+  }
+  .facebook.call {
+    display: flex;
+  }
+}
+
+@media (max-width: 730px) {
+  #navbar-logo {
+    height: 60px;
+  }
+
+  .navbar {
+    font-size: small;
+  }
+
+  .call-us {
+    width: 50px;
+    height: 50px;
+  }
+
+  #call-image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+
+  .top-menu {
+    padding-left: 30px;
+  }
+  /* .navbar {
+    width: 200%;
+    max-width: 675px;
+  } */
+  body {
+    width: 250%;
+    max-width: 735px;
+  }
+}
